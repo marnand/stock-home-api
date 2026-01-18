@@ -13,8 +13,7 @@
   "dependencies": {
     "@elysiajs/cors": "^1.4.1",
     "@supabase/supabase-js": "^2.38.0",
-    "cors": "^2.8.5",
-    "elysia": "^0.8.17"
+    "elysia": "^1.4.0"
   },
   "devDependencies": {
     "@types/bun": "latest",
