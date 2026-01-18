@@ -4,6 +4,9 @@
   "description": "API backend para StockHome com Bun e Supabase",
   "main": "src/index.ts",
   "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "dev": "bun run src/index.ts",
     "build": "bun build src/index.ts --outdir dist",
