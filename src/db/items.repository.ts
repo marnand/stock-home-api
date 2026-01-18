@@ -4,7 +4,7 @@ import type {
   CreateItemDTO,
   UpdateItemDTO,
   PaginatedResponse,
-} from "@/types";
+} from "../types";
 
 export class ItemsRepository {
   static async getAllItems(

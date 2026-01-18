@@ -1,7 +1,7 @@
 import { Elysia } from "elysia";
-import { ItemsController } from "@/controllers/items.controller.js";
-import { authMiddleware } from "@/middleware/auth.middleware.js";
-import type { CreateItemDTO, UpdateItemDTO } from "@/types/index.js";
+import { ItemsController } from "../controllers/items.controller.js";
+import { authMiddleware } from "../middleware/auth.middleware.js";
+import type { CreateItemDTO, UpdateItemDTO } from "../types/index.js";
 
 export const itemsRoutes = new Elysia({ prefix: "/items" })
   .use(authMiddleware)

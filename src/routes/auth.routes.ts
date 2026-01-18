@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
-import { AuthController } from "@/controllers/auth.controller.js";
-import { authMiddleware } from "@/middleware/auth.middleware.js";
+import { AuthController } from "../controllers/auth.controller.js";
+import { authMiddleware } from "../middleware/auth.middleware.js";
 
 export const authRoutes = new Elysia({ prefix: "/auth" })
   .post("/signup", async ({ body }: any) => {

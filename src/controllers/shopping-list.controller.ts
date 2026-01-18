@@ -1,10 +1,10 @@
-import { ShoppingListRepository } from "@/db/index.js";
+import { ShoppingListRepository } from "../db/index.js";
 import type {
   ShoppingListItem,
   CreateShoppingListItemDTO,
   UpdateShoppingListItemDTO,
   ApiResponse,
-} from "@/types/index.js";
+} from "../types/index.js";
 
 export class ShoppingListController {
   static async getAllItems(

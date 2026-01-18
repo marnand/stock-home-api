@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
-import { AnalyticsController } from "@/controllers/analytics.controller.js";
-import { authMiddleware } from "@/middleware/auth.middleware.js";
+import { AnalyticsController } from "../controllers/analytics.controller.js";
+import { authMiddleware } from "../middleware/auth.middleware.js";
 
 export const analyticsRoutes = new Elysia({ prefix: "/analytics" })
   .use(authMiddleware)

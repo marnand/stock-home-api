@@ -13,13 +13,6 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "@/types": ["src/types/index.ts"],
-      "@/db": ["src/db/index.ts"],
-      "@/routes": ["src/routes/index.ts"],
-      "@/utils": ["src/utils/index.ts"]
-    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

@@ -4,7 +4,7 @@ import type {
   CreateShoppingListItemDTO,
   UpdateShoppingListItemDTO,
   PaginatedResponse,
-} from "@/types/index.js";
+} from "../types/index.js";
 
 // Não é mais necessário mapeamento - tipos já estão em snake_case
 
