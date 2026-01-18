@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "installCommand": "npm install",
-  "buildCommand": "npm run build:vercel",
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "bun@1"
+    }
+  },
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/index"
+      "destination": "/api/index"
     }
   ]
 }
