@@ -10,10 +10,10 @@ export const itemsRoutes = new Elysia({ prefix: "/items" })
     const limit = parseInt(query.limit) || 10;
     return ItemsController.getAllItems(userId, page, limit);
   })
-  .get("/low-stock", async ({ userId }: { userId: string }) => {
+  .get("/low-stock", async ({ userId }: any) => {
     return ItemsController.getLowStockItems(userId);
   })
-  .get("/expiring", async ({ userId }: { userId: string }) => {
+  .get("/expiring", async ({ userId }: any) => {
     const daysAhead = 30;
     return ItemsController.getExpiringItems(userId, daysAhead);
   })

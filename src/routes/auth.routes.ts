@@ -19,6 +19,6 @@ export const authRoutes = new Elysia({ prefix: "/auth" })
     return AuthController.refreshToken(refresh_token);
   })
   .use(authMiddleware)
-  .get("/me", async ({ userId }: { userId: string }) => {
+  .get("/me", async ({ userId }: any) => {
     return AuthController.getCurrentUser(userId);
   });

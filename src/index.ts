@@ -2,7 +2,7 @@ import { Elysia } from "elysia";
 import { cors } from "@elysiajs/cors";
 import { setupRoutes } from "./routes";
 
-const app = new Elysia({ prefix: "/api" })
+const app = new Elysia()
   .use(cors({
     //origin: process.env.CORS_ORIGIN || "http://localhost:5000",
     origin: "http://localhost:5000",

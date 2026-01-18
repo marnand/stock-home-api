@@ -1,12 +1,11 @@
-import { Elysia } from "elysia";
 import { authRoutes } from "./auth.routes";
 import { itemsRoutes } from "./items.routes";
 import { shoppingListRoutes } from "./shopping-list.routes";
 import { analyticsRoutes } from "./analytics.routes";
 import { healthRoutes } from "./health.routes";
 
-export const setupRoutes = (app: Elysia<"/api">) => {
-  return app
+export const setupRoutes = (app: any): void => {
+  app
     .use(healthRoutes)
     .use(authRoutes)
     .use(itemsRoutes)
