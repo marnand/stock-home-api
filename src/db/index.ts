@@ -1,4 +1,4 @@
-export { supabase, supabaseAdmin, testConnection } from "./client";
-export { ItemsRepository } from "./items.repository";
-export { ShoppingListRepository } from "./shopping-list.repository";
-export { UsersRepository } from "./users.repository";
+export { supabase, supabaseAdmin, testConnection } from "./client.js";
+export { ItemsRepository } from "./items.repository.js";
+export { ShoppingListRepository } from "./shopping-list.repository.js";
+export { UsersRepository } from "./users.repository.js";

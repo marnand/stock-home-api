@@ -1,5 +1,5 @@
-import { ItemsRepository, ShoppingListRepository } from "@/db";
-import type { ApiResponse, InventoryAnalytics, Item } from "@/types";
+import { ItemsRepository, ShoppingListRepository } from "@/db/index.js";
+import type { ApiResponse, InventoryAnalytics, Item } from "@/types/index.js";
 
 export class AnalyticsController {
   static async getInventoryAnalytics(userId: string): Promise<ApiResponse<InventoryAnalytics>> {

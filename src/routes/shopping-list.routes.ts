@@ -1,10 +1,10 @@
 import { Elysia } from "elysia";
-import { ShoppingListController } from "@/controllers/shopping-list.controller";
-import { authMiddleware } from "@/middleware/auth.middleware";
+import { ShoppingListController } from "@/controllers/shopping-list.controller.js";
+import { authMiddleware } from "@/middleware/auth.middleware.js";
 import type {
   CreateShoppingListItemDTO,
   UpdateShoppingListItemDTO,
-} from "@/types";
+} from "@/types/index.js";
 
 export const shoppingListRoutes = new Elysia({ prefix: "/shopping-list" })
   .use(authMiddleware)

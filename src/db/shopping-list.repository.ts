@@ -1,10 +1,10 @@
-import { supabase } from "./client";
+import { supabase } from "./client.js";
 import type {
   ShoppingListItem,
   CreateShoppingListItemDTO,
   UpdateShoppingListItemDTO,
   PaginatedResponse,
-} from "@/types";
+} from "@/types/index.js";
 
 // Não é mais necessário mapeamento - tipos já estão em snake_case
 

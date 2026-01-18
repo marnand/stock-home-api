@@ -1,1 +1,1 @@
-export { errorHandler, validateRequest } from "./error-handler";
+export { errorHandler, validateRequest } from "./error-handler.js";

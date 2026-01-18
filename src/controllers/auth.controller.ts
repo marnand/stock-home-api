@@ -1,6 +1,6 @@
-import { supabase, supabaseAdmin } from "@/db";
-import { UsersRepository } from "@/db/users.repository";
-import type { ApiResponse, User } from "@/types";
+import { supabase } from "@/db/index.js";
+import { UsersRepository } from "@/db/users.repository.js";
+import type { ApiResponse, User } from "@/types/index.js";
 
 export interface SignUpRequest {
   email: string;

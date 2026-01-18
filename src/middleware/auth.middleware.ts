@@ -1,6 +1,6 @@
 import type { Context } from "elysia";
 import { Elysia } from "elysia";
-import { supabase } from "@/db";
+import { supabase } from "@/db/index.js";
 
 export interface AuthContext {
   userId: string;

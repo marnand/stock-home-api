@@ -1,5 +1,5 @@
-import { supabase } from "./client";
-import type { User } from "@/types";
+import { supabase } from "./client.js";
+import type { User } from "@/types/index.js";
 
 // Não é mais necessário mapeamento - tipos já estão em snake_case
 

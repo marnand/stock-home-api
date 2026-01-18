@@ -1,10 +1,10 @@
-import { ItemsRepository } from "@/db";
+import { ItemsRepository } from "@/db/index.js";
 import type {
   Item,
   CreateItemDTO,
   UpdateItemDTO,
   ApiResponse,
-} from "@/types";
+} from "@/types/index.js";
 
 export class ItemsController {
   static async getAllItems(
