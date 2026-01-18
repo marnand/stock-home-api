@@ -1,8 +1,8 @@
-import { authRoutes } from "./auth.routes";
-import { itemsRoutes } from "./items.routes";
-import { shoppingListRoutes } from "./shopping-list.routes";
-import { analyticsRoutes } from "./analytics.routes";
-import { healthRoutes } from "./health.routes";
+import { authRoutes } from "./auth.routes.js";
+import { itemsRoutes } from "./items.routes.js";
+import { shoppingListRoutes } from "./shopping-list.routes.js";
+import { analyticsRoutes } from "./analytics.routes.js";
+import { healthRoutes } from "./health.routes.js";
 
 export const setupRoutes = (app: any): void => {
   app
