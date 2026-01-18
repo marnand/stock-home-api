@@ -1,0 +1,24 @@
+{
+  "name": "stockhome-api",
+  "version": "1.0.0",
+  "description": "API backend para StockHome com Bun e Supabase",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir dist --format esm",
+    "start": "bun src/index.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.4.1",
+    "@supabase/supabase-js": "^2.38.0",
+    "cors": "^2.8.5",
+    "elysia": "^0.8.17"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  }
+}
