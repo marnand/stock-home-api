@@ -30,9 +30,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
   }
 
-  let body: BodyInit | null = null;
-  if (req.method !== "GET" && req.method !== "HEAD") {
-    body = JSON.stringify(req.body);
+  let body: string | null = null;
+  if (req.method !== "GET" && req.method !== "HEAD" && req.body) {
+    body = typeof req.body === "string" ? req.body : JSON.stringify(req.body);
   }
 
   const request = new Request(url.toString(), {
