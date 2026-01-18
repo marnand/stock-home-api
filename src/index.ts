@@ -17,11 +17,4 @@ const app = new Elysia()
 
 setupRoutes(app);
 
-const PORT = 3001;
-
-app.listen(PORT, () => {
-  console.log(`🚀 API StockHome rodando em http://localhost:${PORT}`);
-  console.log(`📝 Documentação: http://localhost:${PORT}/`);
-});
-
 export default app;
