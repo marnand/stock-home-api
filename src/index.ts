@@ -4,8 +4,7 @@ import { setupRoutes } from "./routes";
 
 const app = new Elysia()
   .use(cors({
-    //origin: process.env.CORS_ORIGIN || "http://localhost:5000",
-    origin: "http://localhost:5000",
+    origin: process.env.CORS_ORIGIN || "http://localhost:5000",
     credentials: true,
   }))
   .onError(({ error }) => {
