@@ -7,19 +7,22 @@ import { healthRoutes } from "./health.routes.js";
 export const setupRoutes = (app: any): void => {
   app
     .use(healthRoutes)
-    .use(authRoutes)
-    .use(itemsRoutes)
-    .use(shoppingListRoutes)
-    .use(analyticsRoutes)
+    .group("/api", (api: any) =>
+      api
+        .use(authRoutes)
+        .use(itemsRoutes)
+        .use(shoppingListRoutes)
+        .use(analyticsRoutes)
+    )
     .get("/", () => ({
       message: "StockHome API",
       version: "1.0.0",
       endpoints: {
         health: "/health",
-        auth: "/auth",
-        items: "/items",
-        shopping_list: "/shopping-list",
-        analytics: "/analytics",
+        auth: "/api/auth",
+        items: "/api/items",
+        shopping_list: "/api/shopping-list",
+        analytics: "/api/analytics",
       },
     }));
 };
