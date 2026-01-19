@@ -3,7 +3,7 @@ import { ItemsController } from "../controllers/items.controller.js";
 import { authMiddleware } from "../middleware/auth.middleware.js";
 import type { CreateItemDTO, UpdateItemDTO } from "../types/index.js";
 
-export const itemsRoutes = new Elysia({ prefix: "/items" })
+export const itemsRoutes = new Elysia({ prefix: "/api/items" })
   .use(authMiddleware)
   .get("/", async ({ query, userId }: any) => {
     const page = parseInt(query.page) || 1;
