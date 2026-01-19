@@ -7,32 +7,39 @@ export interface AuthContext {
   user: any;
 }
 
-export const authMiddleware = new Elysia()
-  .derive(async (context: Context) => {
-    const token = context.request.headers.get("Authorization")?.replace("Bearer ", "");
+export const authMiddleware = new Elysia({ name: "authMiddleware" })
+  .derive({ as: "scoped" }, async ({ request, set }) => {
+    const authHeader = request.headers.get("Authorization");
 
-    if (!token) {
-      throw new Error("Token de autenticação não fornecido");
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      set.status = 401;
+      throw new Error("Unauthorized: No token provided");
     }
 
-    try {
-      const {
-        data: { user },
-        error,
-      } = await supabase.auth.getUser(token);
-
-      if (error || !user) {
-        throw new Error("Token inválido");
-      }
-
-      return {
-        userId: user.id,
-        user: user,
-      };
-    } catch (error) {
-      throw new Error("Falha na autenticação: " + String(error));
+    const token = authHeader.substring(7);
+    const userId = await verifyTokenAndGetUserId(token);
+    
+    if (!userId) {
+      set.status = 401;
+      throw new Error("Unauthorized: Invalid token");
     }
+
+    return { userId };
   });
+
+async function verifyTokenAndGetUserId(token: string): Promise<string | null> {
+  try {
+    const { data: { user }, error } = await supabase.auth.getUser(token);
+    
+    if (error || !user) {
+      return null;
+    }
+    
+    return user.id;
+  } catch (error) {
+    return null;
+  }
+}
 
 export const optionalAuthMiddleware = new Elysia()
   .derive(async (context: Context) => {
