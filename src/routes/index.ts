@@ -17,7 +17,7 @@ export const setupRoutes = (app: any): void => {
       endpoints: {
         health: "/health",
         auth: "/auth",
-        items: "/api/items",
+        items: "/items",
         shopping_list: "/shopping-list",
         analytics: "/analytics",
       },
